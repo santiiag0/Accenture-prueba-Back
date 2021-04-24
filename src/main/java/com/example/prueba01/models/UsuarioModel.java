@@ -10,14 +10,60 @@ public class UsuarioModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true, nullable = false)
     private long id;
+    private Integer valorCompra;
+    private Integer valorIva;
+    private Integer valorDomicilio;
+    private Integer valorTotal;
 
     private String nombre;
     private String apellido;
     private String direccion;
+    private String cedula;
+
     private Integer prioridad;
 
     public Integer getPrioridad() {
         return prioridad;
+    }
+
+    public Integer getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(Integer valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public Integer getValorDomicilio() {
+        return valorDomicilio;
+    }
+
+    public void setValorDomicilio(Integer valorDomicilio) {
+        this.valorDomicilio = valorDomicilio;
+    }
+
+    public Integer getValorIva() {
+        return valorIva;
+    }
+
+    public void setValorIva(Integer valorIva) {
+        this.valorIva = valorIva;
+    }
+
+    public Integer getValorCompra() {
+        return valorCompra;
+    }
+
+    public void setValorCompra(Integer valorCompra) {
+        this.valorCompra = valorCompra;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public long getId() {
